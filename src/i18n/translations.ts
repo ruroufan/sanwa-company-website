@@ -47,7 +47,6 @@ export const translations = {
       subtitle: 'EC運営とペット用品の輸出入を中心に、国境を越えたビジネスを支援します。',
       primaryCta: '事業内容を見る',
       secondaryCta: 'お問い合わせ',
-      facts: ['Founded in 2025', 'Shin-Osaka, Japan', 'EC Operations', 'Pet Products', 'Cross-Border Business'],
       visualTitle: 'SANWA BUSINESS FIELD',
       visualCaption: 'From Japan to Asia',
     },
@@ -71,19 +70,16 @@ export const translations = {
           title: 'EC運営',
           description:
             'オンラインショップの運営、商品ページ制作、SNS連携、販売導線の改善まで、日々の運営品質を高めます。',
-          tags: ['Store Operation', 'Product Page', 'SNS', 'Sales Flow'],
         },
         {
           title: 'ペット用品の輸出入',
           description:
             '日本および海外市場に向けたペット用品の輸出入、商品選定、販売展開を一貫して支援します。',
-          tags: ['Pet Products', 'Import / Export', 'Selection', 'Market Entry'],
         },
         {
           title: 'クロスボーダービジネス',
           description:
             '中国、日本、東南アジア市場を中心に、商品流通とオンライン販売をつなぐ事業を展開します。',
-          tags: ['Japan', 'China', 'Southeast Asia', 'Online Sales'],
         },
       ],
     },
@@ -171,7 +167,6 @@ export const translations = {
         'We support borderless business through e-commerce operations and the import and export of pet products.',
       primaryCta: 'View Services',
       secondaryCta: 'Contact Us',
-      facts: ['Founded in 2025', 'Shin-Osaka, Japan', 'EC Operations', 'Pet Products', 'Cross-Border Business'],
       visualTitle: 'SANWA BUSINESS FIELD',
       visualCaption: 'From Japan to Asia',
     },
@@ -196,19 +191,16 @@ export const translations = {
           title: 'E-commerce Operations',
           description:
             'We improve day-to-day store quality, from online store operations and product pages to social channels and sales flows.',
-          tags: ['Store Operation', 'Product Page', 'SNS', 'Sales Flow'],
         },
         {
           title: 'Pet Product Import and Export',
           description:
             'We support pet product import/export, product selection, and market development for Japan and overseas markets.',
-          tags: ['Pet Products', 'Import / Export', 'Selection', 'Market Entry'],
         },
         {
           title: 'Cross-border Business',
           description:
             'We develop businesses that connect product distribution with online sales, focusing on China, Japan, and Southeast Asia.',
-          tags: ['Japan', 'China', 'Southeast Asia', 'Online Sales'],
         },
       ],
     },
@@ -297,7 +289,6 @@ export const translations = {
       subtitle: '以电商运营和宠物产品进出口为核心，支持跨越国境的商业发展。',
       primaryCta: '查看业务内容',
       secondaryCta: '联系我们',
-      facts: ['Founded in 2025', 'Shin-Osaka, Japan', 'EC Operations', 'Pet Products', 'Cross-Border Business'],
       visualTitle: 'SANWA BUSINESS FIELD',
       visualCaption: 'From Japan to Asia',
     },
@@ -320,17 +311,14 @@ export const translations = {
         {
           title: '电商运营',
           description: '从线上店铺运营、商品页面制作到SNS联动和销售路径优化，提升日常运营品质。',
-          tags: ['店铺运营', '商品页面', 'SNS', '销售路径'],
         },
         {
           title: '宠物产品进出口',
           description: '面向日本及海外市场，支持宠物产品的进出口、商品选品与销售拓展。',
-          tags: ['宠物产品', '进出口', '商品选品', '市场拓展'],
         },
         {
           title: '跨境电商相关业务',
           description: '以中国、日本、东南亚市场为中心，开展连接商品流通与线上销售的业务。',
-          tags: ['日本', '中国', '东南亚', '线上销售'],
         },
       ],
     },
@@ -414,7 +402,6 @@ export const translations = {
       subtitle: '以電商營運與寵物產品進出口為核心，支援跨越國境的商業發展。',
       primaryCta: '查看業務內容',
       secondaryCta: '聯絡我們',
-      facts: ['Founded in 2025', 'Shin-Osaka, Japan', 'EC Operations', 'Pet Products', 'Cross-Border Business'],
       visualTitle: 'SANWA BUSINESS FIELD',
       visualCaption: 'From Japan to Asia',
     },
@@ -437,17 +424,14 @@ export const translations = {
         {
           title: '電商營運',
           description: '從線上店鋪營運、商品頁面製作到SNS聯動和銷售路徑優化，提升日常營運品質。',
-          tags: ['店鋪營運', '商品頁面', 'SNS', '銷售路徑'],
         },
         {
           title: '寵物產品進出口',
           description: '面向日本及海外市場，支援寵物產品的進出口、商品選品與銷售拓展。',
-          tags: ['寵物產品', '進出口', '商品選品', '市場拓展'],
         },
         {
           title: '跨境電商相關業務',
           description: '以中國、日本、東南亞市場為中心，推動連結商品流通與線上銷售的業務。',
-          tags: ['日本', '中國', '東南亞', '線上銷售'],
         },
       ],
     },

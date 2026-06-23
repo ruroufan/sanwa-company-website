@@ -26,13 +26,6 @@ export function Hero({ t }: HeroProps) {
             {t.hero.positioning}
           </p>
           <p className="mt-4 max-w-2xl text-base leading-8 text-ink/66 md:text-lg">{t.hero.subtitle}</p>
-          <div className="mt-8 flex max-w-2xl flex-wrap gap-2">
-            {t.hero.facts.map((fact) => (
-              <span key={fact} className="rounded-full border border-line bg-white/75 px-4 py-2 text-xs font-medium text-ink/64">
-                {fact}
-              </span>
-            ))}
-          </div>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
             <a
               href="#services"
