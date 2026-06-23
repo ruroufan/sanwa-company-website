@@ -7,9 +7,10 @@ type HeaderProps = {
   language: Language;
   t: Translation;
   onLanguageChange: (language: Language) => void;
+  onEntranceClick: () => void;
 };
 
-export function Header({ language, t, onLanguageChange }: HeaderProps) {
+export function Header({ language, t, onLanguageChange, onEntranceClick }: HeaderProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   const goToSection = (sectionId: SectionId) => {
@@ -30,6 +31,13 @@ export function Header({ language, t, onLanguageChange }: HeaderProps) {
         </button>
 
         <nav className="hidden items-center gap-7 md:flex" aria-label="Main navigation">
+          <button
+            type="button"
+            onClick={onEntranceClick}
+            className="text-sm font-medium text-ink/65 transition hover:text-ink"
+          >
+            {t.nav.entrance}
+          </button>
           {sectionIds.map((sectionId) => (
             <button
               key={sectionId}
@@ -90,6 +98,16 @@ export function Header({ language, t, onLanguageChange }: HeaderProps) {
                 {t.nav[sectionId]}
               </button>
             ))}
+            <button
+              type="button"
+              onClick={() => {
+                onEntranceClick();
+                setIsOpen(false);
+              }}
+              className="w-full rounded px-2 py-3 text-left text-sm font-medium text-ink transition hover:bg-mist"
+            >
+              {t.nav.entrance}
+            </button>
           </nav>
           <div className="mx-auto mt-4 max-w-7xl">
             <LanguageSwitcher

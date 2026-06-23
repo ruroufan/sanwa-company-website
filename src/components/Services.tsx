@@ -17,10 +17,22 @@ export function Services({ t }: ServicesProps) {
           >
             <div className="flex items-start justify-between gap-5">
               <p className="text-sm font-semibold text-navy">{String(index + 1).padStart(2, '0')}</p>
-              <span className="translate-x-0 text-xl text-ink/30 transition group-hover:translate-x-1 group-hover:text-navy">→</span>
+              <span className="translate-x-0 text-xl text-ink/30 transition group-hover:translate-x-1 group-hover:text-navy">
+                →
+              </span>
             </div>
             <h3 className="mt-10 text-xl font-semibold text-ink transition group-hover:text-navy">{service.title}</h3>
             <p className="mt-5 text-sm leading-7 text-ink/62">{service.description}</p>
+            <div className="mt-7 flex flex-wrap gap-2">
+              {service.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="rounded-full border border-line bg-white px-3 py-1 text-[11px] font-medium text-ink/58"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
             <div className="mt-8 h-px w-12 bg-navy/40 transition group-hover:w-20" />
           </article>
         ))}

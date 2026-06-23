@@ -29,6 +29,20 @@ export function Contact({ t }: ContactProps) {
               </dt>
               <dd className="mt-2 text-base font-medium text-ink">{t.contact.address}</dd>
             </div>
+            <div className="grid gap-5 border-t border-line pt-5 sm:grid-cols-2">
+              <div>
+                <dt className="text-xs font-semibold uppercase tracking-[0.18em] text-ink/42">
+                  {t.contact.hoursLabel}
+                </dt>
+                <dd className="mt-2 text-sm font-medium leading-6 text-ink">{t.contact.hours}</dd>
+              </div>
+              <div>
+                <dt className="text-xs font-semibold uppercase tracking-[0.18em] text-ink/42">
+                  {t.contact.closedLabel}
+                </dt>
+                <dd className="mt-2 text-sm font-medium leading-6 text-ink">{t.contact.closed}</dd>
+              </div>
+            </div>
           </dl>
           <a
             href={`mailto:${t.contact.email}`}

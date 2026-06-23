@@ -42,13 +42,28 @@ export function Hero({ t }: HeroProps) {
           </div>
         </div>
 
-        <div className="relative min-h-[420px]">
-          <div className="absolute right-0 top-4 h-80 w-80 border border-ink/10 bg-white/70 shadow-soft backdrop-blur md:h-[390px] md:w-[390px]" />
-          <div className="absolute left-4 top-20 h-56 w-56 border border-navy/25 bg-white/50 md:h-72 md:w-72" />
+        <div className="relative min-h-[460px]">
+          <div className="absolute right-0 top-4 h-80 w-80 border border-ink/10 bg-white/70 shadow-soft backdrop-blur md:h-[410px] md:w-[410px]" />
+          <div className="absolute left-2 top-20 h-56 w-56 border border-navy/25 bg-white/50 md:h-72 md:w-72" />
           <div className="absolute right-8 top-14 grid h-48 w-48 place-items-center rounded-full border border-line bg-white/75 shadow-soft">
-            <div className="h-28 w-28 rounded-full border border-navy/25 bg-[radial-gradient(circle,#ffffff_0%,#edf2f7_70%)]" />
+            <div className="grid h-28 w-28 place-items-center rounded-full border border-navy/25 bg-[radial-gradient(circle,#ffffff_0%,#edf2f7_70%)]">
+              <div className="h-10 w-10 rounded-full border border-navy/30 bg-white" />
+            </div>
           </div>
-          <div className="absolute bottom-8 right-4 w-72 border border-line bg-white/85 p-5 shadow-soft">
+          <div className="absolute left-12 bottom-24 w-52 border border-line bg-white/70 p-4 shadow-[0_12px_32px_rgba(18,20,23,0.05)]">
+            <div className="grid gap-3">
+              {t.hero.visualItems.map((item) => (
+                <div
+                  key={item}
+                  className="flex items-center justify-between gap-4 border-b border-line pb-3 last:border-b-0 last:pb-0"
+                >
+                  <span className="text-xs font-semibold text-ink/62">{item}</span>
+                  <span className="h-px w-8 bg-navy/35" />
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="absolute bottom-8 right-4 w-72 border border-line bg-white/88 p-5 shadow-soft">
             <p className="text-xs font-semibold tracking-[0.2em] text-navy">{t.hero.visualTitle}</p>
             <p className="mt-4 text-3xl font-semibold tracking-[0.12em] text-ink">SANWA</p>
             <p className="mt-3 text-sm text-ink/55">{t.hero.visualCaption}</p>
@@ -61,6 +76,7 @@ export function Hero({ t }: HeroProps) {
           <div className="absolute left-10 top-8 h-px w-80 rotate-[-24deg] bg-navy/45" />
           <div className="absolute left-24 bottom-24 h-px w-64 rotate-[18deg] bg-ink/20" />
           <div className="absolute right-24 top-24 h-64 w-px rotate-12 bg-ink/15" />
+          <div className="absolute right-4 bottom-36 h-px w-56 rotate-[-32deg] bg-navy/25" />
           <div className="absolute left-8 bottom-12 h-20 w-20 border border-line bg-white/60" />
         </div>
       </div>

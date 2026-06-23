@@ -13,9 +13,8 @@ export function Footer({ t }: FooterProps) {
           <p className="text-lg font-semibold tracking-[0.18em] text-ink">{t.meta.logo}</p>
           <p className="mt-4 font-medium text-ink/70">{t.footer.companyName}</p>
           <p className="mt-2">{t.footer.location}</p>
-          <a className="mt-2 inline-block hover:text-navy" href={`mailto:${t.footer.email}`}>
-            {t.footer.email}
-          </a>
+          <p className="mt-2">{t.footer.hours}</p>
+          <p className="mt-2">{t.footer.closed}</p>
         </div>
         <div className="flex flex-col gap-6 md:items-end md:justify-between">
           <nav className="flex flex-wrap gap-x-5 gap-y-2 md:justify-end" aria-label="Footer navigation">
