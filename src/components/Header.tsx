@@ -86,14 +86,14 @@ export function Header({ language, t, onLanguageChange, onEntranceClick }: Heade
       </div>
 
       {isOpen ? (
-        <div className="border-t border-line bg-white px-5 py-5 md:hidden">
+        <div className="border-t border-line bg-white/95 px-5 py-5 shadow-soft backdrop-blur-xl md:hidden">
           <nav className="mx-auto grid max-w-7xl gap-1" aria-label="Mobile navigation">
             {sectionIds.map((sectionId) => (
               <button
                 key={sectionId}
                 type="button"
                 onClick={() => goToSection(sectionId)}
-                className="w-full rounded px-2 py-3 text-left text-sm font-medium text-ink transition hover:bg-mist"
+                className="w-full rounded px-3 py-3 text-left text-sm font-medium text-ink transition hover:bg-mist"
               >
                 {t.nav[sectionId]}
               </button>
@@ -104,12 +104,12 @@ export function Header({ language, t, onLanguageChange, onEntranceClick }: Heade
                 onEntranceClick();
                 setIsOpen(false);
               }}
-              className="w-full rounded px-2 py-3 text-left text-sm font-medium text-ink transition hover:bg-mist"
+              className="w-full rounded px-3 py-3 text-left text-sm font-medium text-ink transition hover:bg-mist"
             >
               {t.nav.entrance}
             </button>
           </nav>
-          <div className="mx-auto mt-4 max-w-7xl">
+          <div className="mx-auto mt-4 max-w-7xl border-t border-line pt-4">
             <LanguageSwitcher
               currentLanguage={language}
               label={t.common.language}

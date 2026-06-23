@@ -21,7 +21,11 @@ export function Contact({ t }: ContactProps) {
             </div>
             <div>
               <dt className="text-xs font-semibold uppercase tracking-[0.18em] text-ink/42">{t.contact.phoneLabel}</dt>
-              <dd className="mt-2 text-base font-medium text-ink">{t.contact.phone}</dd>
+              <dd className="mt-2 text-base font-medium text-ink">
+                <a href={`tel:${t.contact.phoneHref}`} className="transition hover:text-navy">
+                  {t.contact.phone}
+                </a>
+              </dd>
             </div>
             <div>
               <dt className="text-xs font-semibold uppercase tracking-[0.18em] text-ink/42">
