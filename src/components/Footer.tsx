@@ -8,14 +8,14 @@ export function Footer({ content }: FooterProps) {
   return (
     <footer className="border-t border-warmLine bg-cream px-5 py-10 md:px-8">
       <div className="mx-auto grid max-w-7xl gap-8 text-sm text-warmText md:grid-cols-[1fr_1fr]">
-        <div>
+        <div className="min-w-0">
           <p className="text-lg font-semibold tracking-[0.18em] text-ink">{content.meta.logo}</p>
           <p className="mt-3">{content.meta.companyName}</p>
-          <p className="mt-5 max-w-xl leading-7">{content.contact.address}</p>
-          <p className="mt-2">
+          <p className="mt-5 max-w-xl break-words leading-7">{content.contact.address}</p>
+          <p className="mt-2 break-words">
             {content.contact.emailLabel}: {content.contact.email}
           </p>
-          <p className="mt-2">
+          <p className="mt-2 break-words">
             {content.contact.phoneLabel}: {content.contact.phone}
           </p>
         </div>

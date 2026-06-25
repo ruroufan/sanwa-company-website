@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import type { HomeContent } from '../content/homeContent';
 import type { Language } from '../i18n/translations';
 import { LanguageSwitcher } from './LanguageSwitcher';
@@ -16,6 +17,8 @@ const navItems = [
 ] as const;
 
 export function Header({ content, language, onLanguageChange }: HeaderProps) {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-warmLine/50 bg-cream/86 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 md:px-8">
@@ -33,7 +36,7 @@ export function Header({ content, language, onLanguageChange }: HeaderProps) {
         </nav>
 
         <div className="flex items-center gap-3">
-          <div>
+          <div className="hidden sm:block">
             <LanguageSwitcher currentLanguage={language} label="Language" onChange={onLanguageChange} />
           </div>
           <a
@@ -42,18 +45,46 @@ export function Header({ content, language, onLanguageChange }: HeaderProps) {
           >
             {content.nav.cta}
           </a>
+          <button
+            type="button"
+            onClick={() => setIsOpen((value) => !value)}
+            className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-warmLine bg-ivory text-ink md:hidden"
+            aria-label="Menu"
+            aria-expanded={isOpen}
+          >
+            <span className="grid gap-1">
+              <span className="block h-px w-4 bg-ink" />
+              <span className="block h-px w-4 bg-ink" />
+            </span>
+          </button>
         </div>
       </div>
-      <nav
-        className="mx-auto flex max-w-7xl items-center gap-5 overflow-x-auto border-t border-warmLine/60 px-5 py-3 md:hidden"
-        aria-label="Mobile navigation"
-      >
-        {navItems.map(([key, target]) => (
-          <a key={key} href={`#${target}`} className="shrink-0 text-xs font-semibold text-warmText transition hover:text-ink">
-            {content.nav[key]}
-          </a>
-        ))}
-      </nav>
+      {isOpen ? (
+        <div className="border-t border-warmLine/55 bg-cream/96 px-5 py-5 md:hidden">
+          <nav className="grid gap-1" aria-label="Mobile navigation">
+            {navItems.map(([key, target]) => (
+              <a
+                key={key}
+                href={`#${target}`}
+                onClick={() => setIsOpen(false)}
+                className="rounded-xl px-3 py-3 text-sm font-medium text-warmText transition hover:bg-mist hover:text-ink"
+              >
+                {content.nav[key]}
+              </a>
+            ))}
+          </nav>
+          <div className="mt-4 grid gap-3 border-t border-warmLine/55 pt-4">
+            <LanguageSwitcher currentLanguage={language} label="Language" onChange={onLanguageChange} />
+            <a
+              href="#contact"
+              onClick={() => setIsOpen(false)}
+              className="inline-flex h-11 w-full items-center justify-center rounded-full bg-sage px-5 text-sm font-medium text-white"
+            >
+              {content.nav.cta}
+            </a>
+          </div>
+        </div>
+      ) : null}
     </header>
   );
 }

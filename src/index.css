@@ -13,11 +13,13 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   margin: 0;
   min-width: 320px;
+  overflow-x: hidden;
   background:
     radial-gradient(circle at 12% 8%, rgba(234, 220, 199, 0.18), transparent 28rem),
     linear-gradient(180deg, #faf9f6 0%, #f7f6f2 100%);
@@ -34,6 +36,12 @@ body {
 
 * {
   box-sizing: border-box;
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
 }
 
 @media (prefers-reduced-motion: no-preference) {
