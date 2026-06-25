@@ -4,11 +4,18 @@ export default {
   theme: {
     extend: {
       colors: {
-        ink: '#121417',
-        mist: '#f5f6f8',
-        line: '#e6e8ec',
-        navy: '#16345c',
-        sand: '#f5f0e8',
+        cream: '#faf9f6',
+        ivory: '#fffefa',
+        ink: '#242320',
+        warmText: '#77746d',
+        warmLine: '#e2dccf',
+        sage: '#7f876a',
+        sageDark: '#646c54',
+        gold: '#eadcc7',
+        mist: '#f7f6f2',
+        line: '#e2dccf',
+        navy: '#646c54',
+        sand: '#fffefa',
       },
       fontFamily: {
         sans: [
@@ -23,7 +30,7 @@ export default {
         ],
       },
       boxShadow: {
-        soft: '0 18px 50px rgba(18, 20, 23, 0.08)',
+        soft: '0 28px 80px rgba(36, 35, 32, 0.045)',
       },
     },
   },

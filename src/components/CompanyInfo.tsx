@@ -7,17 +7,17 @@ type CompanyInfoProps = {
 
 export function CompanyInfo({ t }: CompanyInfoProps) {
   return (
-    <Section id="company" label={t.company.label} title={t.company.title} className="bg-white">
-      <div className="mt-8 grid gap-8 md:grid-cols-[0.8fr_1.2fr] md:items-start">
-        <p className="max-w-sm text-sm leading-7 text-ink/58">{t.company.description}</p>
-        <dl className="overflow-hidden border-y border-line bg-white">
+    <Section id="company" label={t.company.label} title={t.company.title} className="bg-sand">
+      <div className="mt-14 grid gap-12 md:grid-cols-[0.7fr_1.3fr] md:items-start">
+        <p className="max-w-sm text-sm leading-8 text-ink/50 md:text-base">{t.company.description}</p>
+        <dl className="border-y border-line">
           {t.company.rows.map(([label, value]) => (
             <div
               key={label}
-              className="grid gap-2 border-b border-line/80 py-3.5 last:border-b-0 md:grid-cols-[180px_1fr] md:gap-6"
+              className="grid gap-2 border-b border-line py-5 last:border-b-0 md:grid-cols-[180px_1fr] md:gap-8"
             >
-              <dt className="text-xs font-semibold uppercase tracking-[0.16em] text-ink/42">{label}</dt>
-              <dd className="text-sm font-medium leading-6 text-ink md:text-base">{value}</dd>
+              <dt className="text-[11px] font-semibold uppercase tracking-[0.18em] text-ink/36">{label}</dt>
+              <dd className="break-words text-sm font-medium leading-7 text-ink/68 md:text-base">{value}</dd>
             </div>
           ))}
         </dl>

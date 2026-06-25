@@ -1,33 +1,35 @@
-import type { Translation } from '../i18n/translations';
-import { Section } from './Section';
+import type { HomeContent } from '../content/homeContent';
 
 type AboutProps = {
-  t: Translation;
+  content: HomeContent;
 };
 
-export function About({ t }: AboutProps) {
+export function About({ content }: AboutProps) {
   return (
-    <Section id="about" label={t.about.label} title={t.about.title}>
-      <div className="mt-10 grid gap-8 border-t border-line pt-10 md:grid-cols-[0.72fr_1.28fr]">
-        <aside className="border-l-2 border-navy pl-6">
-          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-ink/45">{t.common.sectionLabel}</p>
-          <p className="mt-8 text-2xl font-semibold leading-snug text-ink md:text-3xl">{t.about.philosophy}</p>
-          <div className="mt-8 flex flex-wrap gap-2">
-            {t.about.highlights.map((highlight) => (
-              <span key={highlight} className="rounded-full bg-mist px-4 py-2 text-xs font-semibold text-ink/62">
-                {highlight}
-              </span>
-            ))}
+    <section id="about" className="bg-cream px-5 py-20 md:px-8 md:py-28">
+      <div className="mx-auto max-w-7xl rounded-2xl border border-warmLine/70 bg-ivory/72 px-6 py-10 md:px-12 md:py-16">
+        <div className="grid gap-10 md:grid-cols-[0.8fr_1.2fr] md:items-start">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-sageDark/70">{content.about.label}</p>
+            <h2 className="mt-5 text-3xl font-medium leading-tight tracking-[-0.01em] text-ink md:text-5xl">
+              {content.about.title}
+            </h2>
           </div>
-        </aside>
-        <div className="space-y-5 border border-line bg-white p-6 text-base leading-8 text-ink/68 shadow-[0_14px_40px_rgba(18,20,23,0.04)] md:p-8 md:text-lg">
-          {t.about.body.map((paragraph, index) => (
-            <p key={paragraph} className={index === 0 ? 'text-ink/78' : ''}>
-              {paragraph}
-            </p>
-          ))}
+          <div>
+            <p className="text-base leading-8 text-warmText md:text-lg md:leading-9">{content.about.body}</p>
+            <div className="mt-9 flex flex-wrap gap-3">
+              {content.about.points.map((point) => (
+                <span
+                  key={point}
+                  className="rounded-full border border-warmLine/70 bg-transparent px-4 py-2 text-xs font-medium text-warmText"
+                >
+                  {point}
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
-    </Section>
+    </section>
   );
 }
