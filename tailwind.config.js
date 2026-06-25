@@ -18,6 +18,30 @@ export default {
         sand: '#fffefa',
       },
       fontFamily: {
+        display: [
+          'Helvetica Neue',
+          'Helvetica',
+          'Arial',
+          'Hiragino Sans',
+          'Hiragino Kaku Gothic ProN',
+          'Noto Sans JP',
+          'sans-serif',
+        ],
+        grotesk: [
+          'Akzidenz-Grotesk',
+          'Helvetica Neue',
+          'Helvetica',
+          'Arial',
+          'sans-serif',
+        ],
+        body: [
+          'Helvetica Neue',
+          'Arial',
+          'Hiragino Sans',
+          'Hiragino Kaku Gothic ProN',
+          'Noto Sans JP',
+          'sans-serif',
+        ],
         sans: [
           'Noto Sans JP',
           'Hiragino Sans',

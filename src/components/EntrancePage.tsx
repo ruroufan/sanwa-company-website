@@ -1,54 +1,37 @@
-import type { Language, Translation } from '../i18n/translations';
-import { LanguageSwitcher } from './LanguageSwitcher';
-
 type EntrancePageProps = {
-  language: Language;
-  t: Translation;
   onEnter: () => void;
-  onLanguageChange: (language: Language) => void;
 };
 
-export function EntrancePage({ language, t, onEnter, onLanguageChange }: EntrancePageProps) {
+export function EntrancePage({ onEnter }: EntrancePageProps) {
   return (
-    <main className="min-h-screen overflow-hidden bg-mist px-5 py-6 text-ink md:px-8">
-      <header className="mx-auto flex max-w-6xl items-center justify-between gap-4">
-        <p className="text-lg font-bold tracking-[0.2em] text-ink">{t.meta.logo}</p>
-        <LanguageSwitcher currentLanguage={language} label={t.common.language} onChange={onLanguageChange} />
-      </header>
+    <main className="fade-in relative min-h-screen overflow-hidden bg-[#1f211d] text-white">
+      <img
+        src="/images/entrance-background.jpg"
+        alt=""
+        className="absolute inset-0 h-full w-full object-cover"
+        aria-hidden="true"
+      />
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(18,19,16,0.18)_0%,rgba(18,19,16,0.22)_42%,rgba(18,19,16,0.34)_100%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_39%,rgba(0,0,0,0.02),rgba(0,0,0,0.18)_68%)]" />
 
-      <section className="fade-in mx-auto grid max-w-6xl gap-16 py-16 md:min-h-[calc(100vh-92px)] md:grid-cols-[1.08fr_0.92fr] md:items-center md:py-24">
+      <div className="relative z-10 flex min-h-screen items-start justify-center px-6 pt-[38vh] text-center md:pt-[40vh]">
         <div>
-          <p className="break-words text-[11px] font-semibold uppercase leading-6 tracking-[0.24em] text-ink/42">
-            {t.entrance.tags}
-          </p>
-          <h1 className="mt-10 text-5xl font-bold leading-[1.05] tracking-[-0.01em] text-ink sm:text-6xl md:text-7xl">
-            {t.entrance.title}
+          <h1 className="font-display text-4xl font-bold tracking-[0.08em] text-white drop-shadow-[0_2px_18px_rgba(0,0,0,0.28)] sm:text-5xl md:text-6xl">
+            三和株式会社
           </h1>
-          <p className="mt-8 max-w-2xl text-base leading-8 text-ink/56 md:text-xl md:leading-10">
-            {t.entrance.subtitle}
+          <p className="mt-4 font-grotesk text-xs font-medium uppercase tracking-[0.22em] text-white/76 drop-shadow-[0_2px_14px_rgba(0,0,0,0.22)] md:text-sm">
+            SANWA Co., Ltd.
           </p>
-
           <button
             type="button"
             onClick={onEnter}
-            className="mt-12 inline-flex h-12 w-full items-center justify-center rounded-md bg-ink px-8 text-sm font-semibold tracking-[0.08em] text-white transition hover:bg-navy sm:w-auto"
+            className="mt-10 inline-flex h-12 items-center justify-center border border-white/64 bg-white/8 px-12 font-grotesk text-sm font-medium uppercase tracking-[0.22em] text-white backdrop-blur-[2px] transition duration-300 hover:-translate-y-0.5 hover:border-white/86 hover:bg-white/14"
+            aria-label="Enter official website"
           >
-            {t.entrance.button}
+            ENTER
           </button>
         </div>
-
-        <aside className="border-y border-line py-8 md:py-10">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-ink/42">{t.entrance.infoTitle}</p>
-          <dl className="mt-8 divide-y divide-line">
-            {t.entrance.rows.map(([label, value]) => (
-              <div key={label} className="grid gap-2 py-5 sm:grid-cols-[128px_1fr] sm:gap-6">
-                <dt className="text-[11px] font-semibold uppercase tracking-[0.16em] text-ink/36">{label}</dt>
-                <dd className="break-words text-sm font-medium leading-7 text-ink/68">{value}</dd>
-              </div>
-            ))}
-          </dl>
-        </aside>
-      </section>
+      </div>
     </main>
   );
 }

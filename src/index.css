@@ -24,13 +24,11 @@ body {
     radial-gradient(circle at 12% 8%, rgba(234, 220, 199, 0.18), transparent 28rem),
     linear-gradient(180deg, #faf9f6 0%, #f7f6f2 100%);
   font-family:
-    Noto Sans JP,
+    Helvetica Neue,
+    Arial,
     Hiragino Sans,
     Hiragino Kaku Gothic ProN,
-    Yu Gothic,
-    Meiryo,
-    Inter,
-    system-ui,
+    Noto Sans JP,
     sans-serif;
 }
 

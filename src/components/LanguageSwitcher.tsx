@@ -15,12 +15,12 @@ type LanguageSwitcherProps = {
 
 export function LanguageSwitcher({ currentLanguage, label, onChange }: LanguageSwitcherProps) {
   return (
-    <label className="inline-flex items-center gap-2 text-xs font-medium text-warmText">
+    <label className="inline-flex items-center gap-2 font-grotesk text-xs font-medium text-warmText">
       <span className="sr-only">{label}</span>
       <select
         value={currentLanguage}
         onChange={(event) => onChange(event.target.value as Language)}
-        className="h-9 rounded-full border border-warmLine bg-ivory px-3 text-xs font-medium text-ink outline-none transition hover:border-sage/50 focus:border-sage"
+        className="h-9 rounded-full border border-warmLine bg-ivory px-3 font-grotesk text-xs font-medium text-ink outline-none transition hover:border-sage/50 focus:border-sage"
         aria-label={label}
       >
         {languageOptions.map((language) => (
