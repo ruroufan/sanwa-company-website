@@ -21,10 +21,13 @@ export function Header({ content, language, onLanguageChange }: HeaderProps) {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-warmLine/50 bg-cream/86 backdrop-blur-xl">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 md:px-8">
-        <a href="#home" className="flex items-baseline gap-3 font-grotesk" aria-label={content.nav.home}>
-          <span className="text-base font-semibold tracking-[0.18em] text-ink">{content.meta.logo}</span>
-          <span className="hidden text-xs font-medium text-warmText/70 sm:inline">{content.meta.companyName}</span>
+      <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-5 md:h-20 md:px-8 lg:h-[84px]">
+        <a href="#home" className="flex min-w-0 items-center" aria-label={content.nav.home}>
+          <img
+            src="/images/sanwa-logo-transparent.png"
+            alt="SANWA 三和株式会社"
+            className="h-9 w-auto max-w-[190px] object-contain sm:h-10 sm:max-w-[220px] md:h-12 md:max-w-[250px] lg:h-[52px] lg:max-w-[260px]"
+          />
         </a>
 
         <nav className="hidden items-center gap-8 font-grotesk md:flex" aria-label="Main navigation">

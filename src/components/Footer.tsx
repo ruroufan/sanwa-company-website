@@ -9,7 +9,11 @@ export function Footer({ content }: FooterProps) {
     <footer className="border-t border-warmLine bg-cream px-5 py-10 md:px-8">
       <div className="mx-auto grid max-w-7xl gap-8 font-body text-sm text-warmText md:grid-cols-[1fr_1fr]">
         <div className="min-w-0">
-          <p className="font-grotesk text-lg font-semibold tracking-[0.18em] text-ink">{content.meta.logo}</p>
+          <img
+            src="/images/sanwa-logo-transparent.png"
+            alt="SANWA 三和株式会社"
+            className="h-10 max-w-[190px] object-contain"
+          />
           <p className="mt-3">{content.meta.companyName}</p>
           <p className="mt-5 max-w-xl break-words leading-7">{content.contact.address}</p>
           <p className="mt-2 break-words">
